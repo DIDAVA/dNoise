@@ -54,5 +54,5 @@ Returns playback duration in `hh:mm:ss` format.
 let duration = noise.formattedTime; // Gets formatted playback duration
 ```
 
-For more information and details please check the [example](https://github.com/DIDAVA/dNoise/examples/index.html).
+For more information and details please check the [example](https://github.com/DIDAVA/dNoise/blob/master/examples/index.html).
 Improvment pulls and feature requests are welcome. 
