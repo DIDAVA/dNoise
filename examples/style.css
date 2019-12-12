@@ -1,0 +1,72 @@
+:root {
+  --bgColor: #222222;
+  --mainColor: #00ccff;
+}
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+body { 
+  color: #cccccc; 
+  background-color: var(--bgColor); 
+  max-width: 500px; 
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+header, main { 
+  padding: 20px 20px; 
+}
+a { 
+  text-decoration: none; 
+  color: var(--mainColor); 
+}
+.small { 
+  font-size: 14px; 
+}
+button {
+  width: 100%;
+  background-color: #333;
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+  margin: 5px 0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+#info {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: var(--mainColor);
+  border-bottom: 2px solid var(--mainColor);
+  margin-bottom: 20px;
+}
+#time {
+  float: right;
+}
+#white {
+  color: white;
+  border-color: white;
+}
+#pink {
+  color: pink;
+  border-color: pink;
+}
+#blue {
+  color: cyan;
+  border-color: cyan;
+}
+#red {
+  color: red;
+  border-color: red;
+}
+#violet {
+  color: violet;
+  border-color: violet;
+}
+#stop {
+  margin-top: 20px;
+}

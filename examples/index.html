@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="eAudio | Extended HTML Audio Object">
+  <meta name="author" content="DIDAVA Media">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>dNoise Demo | DIDAVA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>dNoise Demo <a href="https://github.com/DIDAVA/dNoise" class="small">Github</a></h1>
+    <p>Audio Noise Generator Object by <a href="https://www.didava.ir">DIDAVA</a>.</p>
+  </header>
+  <main>
+    <div id="info">
+      <span>Mode: <span id="mode"></span></span>
+      <span id="time">00:00:00</span>
+    </div>
+    <button id="start">Start</button>
+    <div id="btns"></div>
+  </main>
+</body>
+<script src="../dist/dnoise.min.js"></script>
+<script>
+  const modeTitle = document.querySelector('#mode');
+  const time = document.querySelector('#time');
+  const btns = document.querySelector('#btns');
+
+  document.querySelector('#start').addEventListener('click', e => {
+    e.target.remove(); // Remove start button after click
+
+    const noise = new dNoise();
+
+    noise.modes.forEach( mode => { // Create a button for each noise
+      const button = document.createElement('button');
+      button.id = mode;
+      button.innerText = mode.charAt(0).toUpperCase() + mode.slice(1) + ' Noise';
+      button.onclick = () => {
+        noise[mode]();
+        modeTitle.innerText = button.innerText;
+      }
+      btns.appendChild(button);
+    });
+
+    // Stop button
+    const stop = document.createElement('button');
+    stop.innerText = 'Stop';
+    stop.onclick = () => noise.stop();
+    btns.appendChild(stop);
+
+    // Timer
+    setInterval( () => time.innerText = noise.formattedTime, 100);
+
+    console.log(noise);
+  });
+</script>
+</html>
