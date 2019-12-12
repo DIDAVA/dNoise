@@ -1,7 +1,7 @@
 # dNoise
 **Audio Noise Generator for Web Browsers**
 
-`dNoise` is a standard audio noise generator covering most popular noise types such as `White Noise`, `Pink Noise`, `Red Noise` `also known as Brownian Noise`, `Blue Noise`, and `Violet Noise` that are used by sound engineers. `dNoise` uses `Web Audio API` which is not supported in old browsers like `Microsoft Internet Explorer` and works on latest modern browsers such as `Chrome`, `Firefox` and `Safari`.
+`dNoise` is a standard audio noise generator covering most popular noise types such as `White Noise`, `Pink Noise`, `Red Noise` also known as `Brownian Noise`, `Blue Noise`, and `Violet Noise` that are used by sound engineers. `dNoise` uses `Web Audio API` which is not supported in old browsers like `Microsoft Internet Explorer` and works on latest modern browsers such as `Chrome`, `Firefox` and `Safari`.
 
 ## Basic Setup
 ```javascript
